@@ -3,44 +3,44 @@ import { StyleSheet, View, ImageBackground, Text, Image, TouchableOpacity, TextI
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
 import ImagePicker from 'react-native-image-crop-picker';
 
-const Login = ({ onBack }) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const image = require('./image/1.png');
+// const Login = ({ onBack }) => {
+//     const [email, setEmail] = useState('');
+//     const [password, setPassword] = useState('');
+//     const image = require('./image/1.png');
 
-    return (
-        <View style={styles.container}>
-            <ImageBackground source={image} resizeMode="cover" style={styles.imageBackground}>
-                <View style={styles.content}>
-                    <Text style={styles.text}>Login</Text>
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Email"
-                        placeholderTextColor="#aaa"
-                        value={email}
-                        onChangeText={setEmail}
-                        keyboardType="email-address"
-                        autoCapitalize="none"
-                    />
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Password"
-                        placeholderTextColor="#aaa"
-                        value={password}
-                        onChangeText={setPassword}
-                        secureTextEntry
-                    />
-                    <TouchableOpacity
-                        style={styles.button}
-                        onPress={onBack}
-                    >
-                        <Text style={styles.buttonTitle}>Login</Text>
-                    </TouchableOpacity>
-                </View>
-            </ImageBackground>
-        </View>
-    );
-};
+//     return (
+//         <View style={styles.container}>
+//             <ImageBackground source={image} resizeMode="cover" style={styles.imageBackground}>
+//                 <View style={styles.content}>
+//                     <Text style={styles.text}>Login</Text>
+//                     <TextInput
+//                         style={styles.input}
+//                         placeholder="Email"
+//                         placeholderTextColor="#aaa"
+//                         value={email}
+//                         onChangeText={setEmail}
+//                         keyboardType="email-address"
+//                         autoCapitalize="none"
+//                     />
+//                     <TextInput
+//                         style={styles.input}
+//                         placeholder="Password"
+//                         placeholderTextColor="#aaa"
+//                         value={password}
+//                         onChangeText={setPassword}
+//                         secureTextEntry
+//                     />
+//                     <TouchableOpacity
+//                         style={styles.button}
+//                         onPress={onBack}
+//                     >
+//                         <Text style={styles.buttonTitle}>Login</Text>
+//                     </TouchableOpacity>
+//                 </View>
+//             </ImageBackground>
+//         </View>
+//     );
+// };
 
 const OpenCamera = () => {
     const [imgUrl, setImgUrl] = useState(null); 
@@ -174,12 +174,12 @@ const OpenCamera = () => {
                     >
                         <Text style={styles.buttonTitle}>Upload Image</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
+                    {/* <TouchableOpacity
                         style={styles.button}
                         onPress={() => setShowLogin(true)}
                     >
                         <Text style={styles.buttonTitle}>Login & Register</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
             </ImageBackground>
         </View>
